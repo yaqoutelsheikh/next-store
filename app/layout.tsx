@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono, Inter} from "next/font/google";
-import "./globals.css";
+import {Geist, Inter} from "next/font/google";
+import "../assets/styles/globals.css";
 import {ThemeProvider} from "next-themes";
 import {APP_DESCRIPTION, APP_NAME, SERVER_URL} from "@/lib/constants";
 import {cn} from "@/lib/utils";
