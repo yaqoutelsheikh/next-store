@@ -8,6 +8,7 @@ import {compareSync} from "bcrypt-ts-edge";
 export const config = {
     pages: {
         signIn: 'sign-in',
+        newUser: '/sign-up',
         error: 'sign-in'
     },
     session: {
