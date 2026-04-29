@@ -25,7 +25,7 @@ const ModeToggle = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-transparent transition-all duration-300 hover:border-border hover:bg-primary/10 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
+                className="flex cursor-pointer h-9 w-9 items-center justify-center rounded-lg border border-transparent transition-all duration-300 hover:border-border hover:bg-primary/10 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
             >
                 {theme === "system" ? (
                     <SunMoonIcon className="h-[1.2rem] w-[1.2rem]" />

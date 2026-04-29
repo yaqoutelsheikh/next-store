@@ -10,3 +10,19 @@ export  const SignInDefaultValues = {
     email:'',
     password:'',
 }
+export  interface SignUpFormState  {
+errors?:{
+    name?:string[],
+    email?:string[],
+    password?:string[],
+    confirmPassword?:string[],
+}
+formData?:{
+    name?:string,
+    email?:string,
+    password?:string,
+    confirmPassword?:string,
+};
+status?:number;
+message?:string;
+}
