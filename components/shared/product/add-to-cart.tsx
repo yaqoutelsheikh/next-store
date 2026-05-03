@@ -72,7 +72,12 @@ function AddToCart({cart, item}: { cart?: Cart, item: CartItem }) {
                 </Button>
             </div>
         ) :
-        (<Button className="w-full   " type={'button'} onClick={handleAddToCart}><Plus/> Add To Cart</Button>)
+        (<Button className="w-full   " type={'button'} onClick={handleAddToCart}>
+            {isPending ? (
+                <Loader className="w-4 h-4 animate-spin"/>
+            ) : (
+                <Plus className="w-4 h-4"/>
+            )} Add To Cart</Button>)
 }
 
 export default AddToCart;
