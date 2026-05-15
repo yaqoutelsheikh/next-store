@@ -25,7 +25,7 @@ const calcPrice = (items: CartItem[]) => {
     };
 };
 
-export async function addToCart(data: CartItem) {
+export async function addItemToCart(data: CartItem) {
     try {
         // Get for cart cookie
         const sessionCartId = (await cookies()).get("sessionCartId")?.value;

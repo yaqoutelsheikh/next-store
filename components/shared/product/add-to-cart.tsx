@@ -1,7 +1,7 @@
 'use client';
 import {Cart, CartItem} from "@/types";
 import {Button} from "@/components/ui/button";
-import {addToCart, removeItemFromCart} from "@/lib/actions/cart.actions";
+import {addItemToCart, removeItemFromCart} from "@/lib/actions/cart.actions";
 import {toast} from "sonner";
 import {useRouter} from "next/navigation";
 import {Loader, Minus, Plus} from "lucide-react";
@@ -13,7 +13,7 @@ function AddToCart({cart, item}: { cart?: Cart, item: CartItem }) {
     const handleAddToCart = async () => {
         startTransition(async () => {
 
-            const res = await addToCart(item);
+            const res = await addItemToCart(item);
             if (!res.success) {
                 toast.error('', {
                     position: "top-center",
