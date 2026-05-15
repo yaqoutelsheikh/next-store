@@ -1,4 +1,9 @@
 import NextAuth from 'next-auth';
-import {authConfig} from './auth.config';
+import { authConfig } from './auth.config';
 
-export const {auth: middleware} = NextAuth(authConfig);
+// نقوم بتعريف الـ middleware وتصديره كـ default
+const { auth } = NextAuth(authConfig);
+export default auth; 
+
+// إذا كنت تحتاج استخدام 'auth' في أماكن أخرى كـ named export
+export { auth as middleware };
